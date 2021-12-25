@@ -1,0 +1,109 @@
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desatured-blue: hsl(224, 23%, 55%); 
+    --dark-blue: hsl(223, 47%, 23%);
+}
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif; 
+}
+body p{
+    font-size: 16px;
+}
+.card{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-color: var(--pale-blue);
+}
+.main{
+    max-width: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+}
+.hero-image{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.info-summary{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin: 16px 5%;
+}
+.subtitle{
+    color: var(--desatured-blue);
+    margin: 0 10%;
+    font-weight: 500;
+}
+.annual-plan-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 10%;
+    background-color: var(--very-pale-blue);
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px;
+}
+.annual-plan-main-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.annual-plan-main-info div{
+    margin: 0 8px;
+}
+.annual-plan-main-info div p:nth-child(1){
+    font-weight: 900;
+}
+.change-plan a{
+    font-weight: 700;
+    color: var(--bright-blue);
+}
+.change-plan a:hover{
+    color: #766cf1;
+    text-decoration: none;
+}
+.primary-button{
+    border-radius: 8px;
+    margin: 16px 10%;
+    border: none;
+    background-color: var(--bright-blue);
+    font-weight: 900;
+    color: var(--pale-blue);
+    padding: 16px 0;
+    cursor: pointer;
+}
+.primary-button:hover{
+    background-color: #766cf1;
+}
+.cancel-order{
+    margin-top:8px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--desatured-blue);
+}
+.cancel-order:hover{
+    color: var(--dark-blue);
+}
+@media (max-width: 375px){
+    .main{
+        max-width: 90%;
+    }
+}
